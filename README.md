@@ -26,3 +26,5 @@ Output
  Confidence score
  Evidence links
 
+ “Our ML pipeline retrieves trusted evidence, filters relevant sentences using semantic similarity models, and verifies claims using a transformer‑based natural language inference model.”
+
