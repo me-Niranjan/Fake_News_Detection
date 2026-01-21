@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TruthLens | AI Fake News Detection</title>
+    <meta name="description" content="Verify news claims with AI-powered evidence analysis. Fast, accurate, and transparent.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <span class="logo-text">TruthLens</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active">Verify</a>
+                <a href="#about">How it Works</a>
+                <a href="#sources">Sources</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero">
+            <h1 class="hero-title">Uncover the <span class="gradient-text">Truth</span> behind the headlines.</h1>
+            <p class="hero-subtitle">Our AI analyzes claims against trusted global sources to give you an evidence-based verdict in seconds.</p>
+        </header>
+
+        <!-- Main Input Section -->
+        <main class="verifier-section">
+            <div class="input-card">
+                <div class="input-wrapper">
+                    <textarea id="claimInput" placeholder="Paste a news claim here to verify..." rows="4"></textarea>
+                    <div class="input-footer">
+                        <span id="charCount">0/500</span>
+                        <button id="verifyBtn" class="primary-btn">
+                            <span class="btn-text">Verify Claim</span>
+                            <span class="btn-loader hidden"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Section (Hidden by default) -->
+            <div id="resultContainer" class="result-container hidden">
+                <div class="verdict-header">
+                    <div class="verdict-badge" id="verdictBadge">
+                        <!-- Injected via JS: REAL / FAKE / NOT ENOUGH INFO -->
+                    </div>
+                    <div class="confidence-wrapper">
+                        <svg class="progress-ring" width="60" height="60">
+                            <circle class="progress-ring__circle-bg" stroke="currentColor" stroke-width="4" fill="transparent" r="26" cx="30" cy="30"/>
+                            <circle class="progress-ring__circle" id="confidenceRing" stroke="currentColor" stroke-width="4" fill="transparent" r="26" cx="30" cy="30"/>
+                        </svg>
+                        <span class="confidence-text" id="confidenceScore">0%</span>
+                    </div>
+                </div>
+
+                <div class="evidence-section">
+                    <h3>Evidence & Sources</h3>
+                    <div class="evidence-grid" id="evidenceList">
+                        <!-- Evidence cards injected via JS -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 TruthLens AI. Powered by NLP & Semantic Analysis.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
